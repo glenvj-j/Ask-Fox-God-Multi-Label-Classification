@@ -4,15 +4,17 @@ import pickle
 import datetime
 import numpy as np
 import base64
+import requests
+
 
 st.set_page_config(
     page_title="Ask Fox God",
     layout="wide"
 )
 
-def set_background(image_path):
-    with open(image_path, "rb") as img_file:
-        encoded = base64.b64encode(img_file.read()).decode()
+def set_background(image_url):
+    response = requests.get(image_url)
+    encoded = base64.b64encode(response.content).decode()
     st.markdown(
         f"""
         <style>
@@ -27,8 +29,9 @@ def set_background(image_path):
         unsafe_allow_html=True
     )
 
-# Call the function with your file path
-set_background("https://raw.githubusercontent.com/glenvj-j/Ask-Fox-God-Multi-Label-Classification/refs/heads/main/image/background.png")
+# Call with the GitHub raw URL
+set_background("https://raw.githubusercontent.com/glenvj-j/Ask-Fox-God-Multi-Label-Classification/main/image/background.png")
+
 
 # Set black background and white text
 st.markdown(
