@@ -131,7 +131,10 @@ with col2:
 with col3:
     if ask_button:
         # Load model
-        loaded_model = pickle.load(open(f'https://github.com/glenvj-j/Ask-Fox-God-Multi-Label-Classification/raw/refs/heads/main/dataset/Prediction_Model.sav', 'rb'))
+        url = "https://github.com/glenvj-j/Ask-Fox-God-Multi-Label-Classification/raw/refs/heads/main/dataset/Prediction_Model.sav"
+        response = requests.get(url)
+        loaded_model = pickle.loads(response.content)
+        # loaded_model = pickle.load(open(f'https://github.com/glenvj-j/Ask-Fox-God-Multi-Label-Classification/raw/refs/heads/main/dataset/Prediction_Model.sav', 'rb'))
         y_pred_proba = loaded_model.predict_proba(selected_dataframe) * 100
 
         rounded_y_pred_proba = np.round(y_pred_proba, 0)
