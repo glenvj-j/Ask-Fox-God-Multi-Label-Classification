@@ -6,7 +6,7 @@
 > [!NOTE]
 > Dashboard : [View Tableau](https://public.tableau.com/app/profile/glen.joy2546/viz/AskFoxGod/Dashboard1)<br>
 > Presentation Deck  : [View Google Slides](https://docs.google.com/presentation/d/1pu_2hJgoMdNEtERQIvfJATNQTGxtS9sFaBmORvzGE-0/edit?slide=id.p#slide=id.p)<br>
-> Deployment : [View here](https://civdexai-new.streamlit.app/)
+> Deployment : [View here](https://ask-fox-god.streamlit.app/)
 
 This project aims to build and deploy a **multi-label classification model** to predict the likely setlist of BABYMETAL songs in concerts. We also provide an interactive **Streamlit web app** and a **performance dashboard** to explore model predictions and insights.
 
