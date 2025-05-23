@@ -28,7 +28,7 @@ def set_background(image_path):
     )
 
 # Call the function with your file path
-set_background("../image/background.png")
+set_background("https://raw.githubusercontent.com/glenvj-j/Ask-Fox-God-Multi-Label-Classification/refs/heads/main/image/background.png")
 
 # Set black background and white text
 st.markdown(
