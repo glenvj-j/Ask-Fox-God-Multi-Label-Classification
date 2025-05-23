@@ -16,6 +16,4 @@ imbalanced-learn==0.12.3
 
 category-encoders==2.6.4
 
-beautifulsoup4 == beautifulsoup4
-
 Pillow == 10.4.0
