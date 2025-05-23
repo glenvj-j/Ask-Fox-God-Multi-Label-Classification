@@ -95,7 +95,22 @@ def selection_input():
     last_concert = pd.to_datetime(df['eventDate'].tail(1).values[0])
     days_since_last_concert = date_ts - last_concert
 
-    days_since_new_album = st.number_input('Days Since New Album', min_value=0, max_value=365, step=1, value=0)
+    # Add this at the beginning of your script (after imports)
+    if 'days_since_new_album' not in st.session_state:
+        st.session_state.days_since_new_album = 0  # Default value
+    
+    # Replace your existing number_input with this:
+    days_since_new_album = st.number_input(
+        'Days Since New Album',
+        min_value=0,
+        max_value=365,
+        step=1,
+        value=st.session_state.days_since_new_album,
+        key='days_since_new_album_input'
+    )
+    
+    # Update session state when the value changes
+    st.session_state.days_since_new_album = days_since_new_album
 
     year_input = date.year
     month_input = date.month
