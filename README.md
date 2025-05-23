@@ -1,4 +1,4 @@
-# 🎸 Ask FOX GOD - Multi-Label Setlist Prediction Project
+# 🦊 Ask FOX GOD - Multi-Label Setlist Prediction Project
 
 ![Cover](https://github.com/user-attachments/assets/6b4ba631-4519-497a-93a0-a3a604217648)
 
