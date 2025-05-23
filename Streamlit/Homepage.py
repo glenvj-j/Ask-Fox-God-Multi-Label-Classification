@@ -58,7 +58,7 @@ st.markdown(
 
 
 # Load dataset
-url = '../dataset/clean_dataset.csv'
+url = 'https://raw.githubusercontent.com/glenvj-j/Ask-Fox-God-Multi-Label-Classification/refs/heads/main/dataset/clean_dataset.csv'
 df = pd.read_csv(url, index_col=None)
 
 def selection_input():
